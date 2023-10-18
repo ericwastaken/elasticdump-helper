@@ -37,7 +37,7 @@ set +o allexport
 # - ED_HEADERS
 # - ED_HOST
 # Batch Limit (will pull in batches of this amount). Edit to suit!
-ED_LIMIT=5000
+ED_LIMIT=10000
 # How many concurrent processes to run. Edit to suit!
 ED_CONCURRENCY=3
 # File Size for each output file (will create files of this size at most)
@@ -64,4 +64,5 @@ read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
   --searchBody=@"${INQUERY}" \
   --limit "$ED_LIMIT" \
   --concurrency $ED_CONCURRENCY \
-  --fileSize="$ED_FILESIZE"
+  --fileSize="$ED_FILESIZE" \
+  --fsCompress
